@@ -35,7 +35,10 @@ app.use(helmet());
 
 // Allow frontend to talk to backend
 app.use(cors({
-  origin: "http://localhost:5173", // Vite frontend URL
+  origin: [
+    "http://localhost:5173",
+    "https://brew-haven-xi.vercel.app",
+  ],
   credentials: true,
 }));
 
